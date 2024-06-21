@@ -3,6 +3,7 @@ package vascopanigi.u5_w1_d5.runners;
 import com.github.javafaker.Faker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import vascopanigi.u5_w1_d5.entities.Building;
 import vascopanigi.u5_w1_d5.entities.Workspace;
@@ -14,6 +15,7 @@ import java.util.Arrays;
 import java.util.Locale;
 
 @Component
+@Order(1)
 public class DatabaseRunner implements CommandLineRunner {
     @Autowired
     private BuildingRepository buildingRepository;

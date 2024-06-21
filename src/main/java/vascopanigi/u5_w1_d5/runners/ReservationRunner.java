@@ -2,6 +2,7 @@ package vascopanigi.u5_w1_d5.runners;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import vascopanigi.u5_w1_d5.entities.Reservation;
 import vascopanigi.u5_w1_d5.entities.User;
@@ -18,6 +19,7 @@ import java.util.List;
 import java.util.Scanner;
 
 @Component
+@Order(3)
 public class ReservationRunner implements CommandLineRunner {
 
     @Autowired
@@ -49,6 +51,9 @@ public class ReservationRunner implements CommandLineRunner {
 //        Reservation newReservation = new Reservation(filteredUser, LocalDate.now().plusDays(1), queryResult.getFirst());
 //        reservationService.saveReservation(newReservation);
 //        System.out.println("Reservation made!");
+
+
+        //---------------------------REFACTORED CODE------------------------------
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Hello and welcome to our reservation app!");
@@ -69,7 +74,6 @@ public class ReservationRunner implements CommandLineRunner {
                 System.out.println("2. Register a new user");
 
                 int userChoice = Integer.parseInt(scanner.nextLine());
-
 
                 if (userChoice == 1) {
                     continue;
@@ -127,8 +131,6 @@ public class ReservationRunner implements CommandLineRunner {
                 System.out.println((i + 1) + ". " + workspaces.get(i).getWorkspaceType());
             }
 
-
-
             System.out.println("Select a workspace to book (number):");
             int workspaceChoice = Integer.parseInt(scanner.nextLine());
 
@@ -159,8 +161,5 @@ public class ReservationRunner implements CommandLineRunner {
             }
         }
         scanner.close();
-
-
-
     }
 }

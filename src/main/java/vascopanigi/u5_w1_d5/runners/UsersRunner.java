@@ -5,13 +5,16 @@
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.boot.CommandLineRunner;
 //import org.springframework.stereotype.Component;
+//import org.springframework.core.annotation.Order;
 //import vascopanigi.u5_w1_d5.entities.User;
 //import vascopanigi.u5_w1_d5.repositories.UserRepository;
 //
 //import java.util.Arrays;
 //import java.util.Locale;
 //
+//
 //@Component
+//@Order(2)
 //public class UsersRunner implements CommandLineRunner {
 //    @Autowired
 //    private UserRepository userRepository;
