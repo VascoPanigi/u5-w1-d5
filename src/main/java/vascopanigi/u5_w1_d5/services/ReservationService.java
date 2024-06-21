@@ -10,7 +10,6 @@ import vascopanigi.u5_w1_d5.repositories.ReservationRepository;
 import java.util.List;
 
 @Service
-@Slf4j
 public class ReservationService {
     @Autowired
     private ReservationRepository reservationRepository;
