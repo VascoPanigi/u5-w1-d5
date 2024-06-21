@@ -33,4 +33,13 @@ public class Reservation {
     public Reservation(LocalDate reservationDate) {
         this.reservationDate = reservationDate;
     }
+
+    @Override
+    public String toString() {
+        return "Reservation{" +
+                "reservationDate=" + reservationDate +
+                ", user=" + user +
+                ", id=" + id +
+                '}';
+    }
 }

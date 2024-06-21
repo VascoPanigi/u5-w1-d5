@@ -19,6 +19,7 @@ public class Workspace {
     private UUID id;
     private String description;
     @Enumerated(EnumType.STRING)
+    @Column(name = "workspace_type")
     private WorkspaceType workspaceType;
     private int maxPeople;
     @OneToMany(mappedBy = "workspace")
@@ -31,6 +32,16 @@ public class Workspace {
         this.description = description;
         this.workspaceType = workspaceType;
         this.maxPeople = maxPeople;
+    }
+
+    @Override
+    public String toString() {
+        return "Workspace{" +
+                "description='" + description + '\'' +
+                ", workspaceType=" + workspaceType +
+                ", maxPeople=" + maxPeople +
+                ", building=" + building +
+                '}';
     }
 }
 
