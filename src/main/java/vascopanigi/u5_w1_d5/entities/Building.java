@@ -11,7 +11,6 @@ import java.util.UUID;
 @Setter
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "buildings")
 public class Building {
@@ -25,4 +24,10 @@ public class Building {
 
     @OneToMany(mappedBy = "building")
     private List<Workspace> workspaces;
+
+    public Building(String city, String address, String name) {
+        this.city = city;
+        this.address = address;
+        this.name = name;
+    }
 }

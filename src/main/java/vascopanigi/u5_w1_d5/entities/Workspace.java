@@ -10,7 +10,6 @@ import java.util.UUID;
 @Setter
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "workspaces")
 public class Workspace {
@@ -27,5 +26,11 @@ public class Workspace {
     @ManyToOne
     @JoinColumn(name = "building_id")
     private Building building;
+
+    public Workspace(String description, WorkspaceType workspaceType, int maxPeople) {
+        this.description = description;
+        this.workspaceType = workspaceType;
+        this.maxPeople = maxPeople;
+    }
 }
 

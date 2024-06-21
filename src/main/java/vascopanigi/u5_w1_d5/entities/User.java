@@ -8,7 +8,6 @@ import java.util.UUID;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
@@ -24,4 +23,10 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<Reservation> reservations;
+
+    public User(String email, String name, String username) {
+        this.email = email;
+        this.name = name;
+        this.username = username;
+    }
 }
