@@ -30,8 +30,10 @@ public class Reservation {
     @JoinColumn(name="workspace_id")
     private Workspace workspace;
 
-    public Reservation(LocalDate reservationDate) {
+    public Reservation(User user, LocalDate reservationDate, Workspace workspace) {
+        this.user = user;
         this.reservationDate = reservationDate;
+        this.workspace = workspace;
     }
 
     @Override
