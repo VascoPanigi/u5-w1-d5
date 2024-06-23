@@ -11,7 +11,6 @@ import vascopanigi.u5_w1_d5.enums.WorkspaceType;
 import vascopanigi.u5_w1_d5.repositories.BuildingRepository;
 import vascopanigi.u5_w1_d5.repositories.WorkspaceRepository;
 
-import java.util.Arrays;
 import java.util.Locale;
 
 @Component
